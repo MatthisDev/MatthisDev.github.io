@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Chemins Galilée</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+</head>
+<body data-barba="wrapper">
+    <!-- permet de faire les animations entre les pages -->
+    <div class="cont-bandes">
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+    </div>
+    <!-- texte + image de la barre de navigation -->
+    <nav class="nav-barre">
+        <span class="logo-texte">Chemins</br>Galilée</span>
+        <div class="nav-btns">
+            <div class="nav-btn 1">
+                <a href="acceuil.html" class="btn-accueil">
+                    <img src="accessoire/icon/home-solid.svg" alt="" class="home-icone">
+                    <span class="accueil-text"></br>Accueil</span>
+                </a>
+            </div>
+            <div class="nav-btn 2">
+                <img src="accessoire/icon/walking-solid.svg" alt="" class="walk-icone">
+                <div class="barground"></div>
+                <div class="btn-pied">
+                    <span>A pied:</br></span>
+                    <a href="pageChemin/Coupole/carte.html" class="link-Coupole">- Coupole </br></a>
+                    <a href="pageChemin/Stade/carte.html" class="link-Stade">- Stade </br></a>
+                    <a href="pageChemin/BorneBlanche/carte.html" class="link-BorneBlanche">- Borne Blanche</a>
+                </div> 
+            </div>
+            <div class="nav-btn 3">
+                <img src="accessoire/icon/car-solid.svg" alt="" class="car-icone">
+                <div class="btn-voiture">
+                    <span>Aucun chemin</span>
+                </div>
+            </div>
+            <div class="nav-btn 4">
+                <a href="#" class="btn-user">
+                    <img src="accessoire/icon/user-solid.svg" alt="" class="user-icone">
+                    <span class="user-text"><br>Utilisateur</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- principale de page -->
+    <main data-barba="container" data-barba-namespace="home">
+        <!-- partie texte de gauche -->
+        <section class="text-part">
+            <h2 class="page-title">Découverte de chemins</h2>
+            <div class="block-link">
+                <h3 class="walk-title">Aller à pied vers:</h3>
+                <div class="walk-link">
+                    <a href="pageChemin/Coupole/carte.html">La Coupole</a> 
+                    <a href="pageChemin/Stade/carte.html">Le Stade Alain Mimoun</a> 
+                    <a href="pageChemin/BorneBlanche/carte.html">La Borne Blanche</a>
+                </div>
+                <h3 class="car-title">Aller en voiture vers:</h3>
+                <div class="car-link">
+                    <span>Prochainement</span>
+                    <span id="waiting-anim"></span>
+                </div>
+            </div>
+        </section>
+        <!-- partie image de droite -->
+        <section class="image-part">
+            <img class ="image_1" src="accessoire/chemin1.jpg">
+            <img class ="image_2"src="accessoire/chemin2.jpg">
+            <img class ="image_3"src="accessoire/chemin3.jpg">
+        </section>
+    </main>
+    <!-- typewriter librairie qui permet d'animé une écriture de texte automatique -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- GSAP librairie très connue et polivalente d'animation JS (utilisé pour la transition de page)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Barba.js librairie simple d'utilisation pour les transitions de page -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- script -->
+    <script src="main.js"></script>
+    <script src="transi_page.js"></script>
+</body>

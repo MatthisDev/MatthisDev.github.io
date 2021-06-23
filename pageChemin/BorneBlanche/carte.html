@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>-->
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body data-barba="wrapper">
+    
+    <div class="cont-bandes">
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+        <div class="bande"></div>
+    </div>
+    
+    <nav class="nav-barre">
+        <span class="logo-texte">Chemins</br>Galilée</span>
+        <div class="nav-btns">
+            <div class="nav-btn 1">
+                <a href="/acceuil.html" class="btn-accueil">
+                    <img src="/accessoire/icon/home-solid.svg" alt="" class="home-icone">
+                    <span class="accueil-text"></br>Accueil</span>
+                </a>
+            </div>
+            <div class="nav-btn 2">
+                <img src="/accessoire/icon/walking-solid.svg" alt="" class="walk-icone">
+                <div class="barground"></div>
+                <div class="btn-pied">
+                    <span>A pied:</br></span>
+                    <a href="/pageChemin/Coupole/carte.html" class="link-Coupole">- Coupole </br></a>
+                    <a href="/pageChemin/Stade/carte.html" class="link-Stade">- Stade </br></a>
+                    <a href="/BorneBlanche/carte.html" class="link-BorneBlanche">- Borne Blanche</a>
+                </div> 
+            </div>
+            <div class="nav-btn 3">
+                <img src="/accessoire/icon/car-solid.svg" alt="" class="car-icone">
+                <div class="btn-voiture">
+                    <span>Aucun chemin</span>
+                </div>
+            </div>
+            <div class="nav-btn 4">
+                <a href="#" class="btn-user">
+                    <img src="/accessoire/icon/user-solid.svg" alt="" class="user-icone">
+                    <span class="user-text"><br>Utilisateur</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main data-barba="container" data-barba-namespace="BorneBlanche">
+        <h1 class="title-page">Galilée vers la Borne Blanche :</h1>
+        <div class="folium-map" id="map" ></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="script.js"></script>
+    <script src="/transi_page.js"></script>
+</body>

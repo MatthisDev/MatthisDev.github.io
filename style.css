@@ -1,0 +1,383 @@
+/* Initialisation */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+a{
+    color: black;
+}
+
+/*  
+
+**  nav-barre  
+
+*/
+nav {
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    height: 10vh;
+    z-index: 5;
+    background-color: #DEE6ED;
+    font-family: Chalkduster, fantasy;
+    font-size: 20px;
+}
+
+.logo-texte{
+    position: relative;
+    top: 17%;
+    left: 1%;
+}
+
+/* icones */
+nav img{
+    position:relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.home-icone{
+    top: 5%
+}
+.car-icone{
+    top: 5%; 
+}
+
+/*bouttons */
+nav a:hover{
+    color: #72b2e9;
+}
+.nav-btns{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 44.5cm; 
+    top: 8mm;
+}
+.nav-btn{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    width: 50px;
+    height:50px;
+}
+
+/*boutton 1*/
+.nav-btn:nth-child(1){
+    right: 8%;
+
+}
+.btn-accueil:not(:hover) .accueil-text{
+    display: none;
+}
+.accueil-text{
+    height: 10px;
+    position: absolute;
+    top: 42%;
+    right: -5%;
+    margin: 0;
+    padding: 0;
+}
+.btn-accueil{
+    text-decoration: none;
+}
+
+/* boutton 2*/
+.nav-btn:nth-child(2){
+    right: 5%;
+}
+
+.barground{
+    background-color: #DEE6ED;
+    position: absolute;
+    left: -250%;
+    top: 1.8cm;
+    width: 400px;
+    height: 1px;
+    transition: height 0.2s ease;
+}
+.nav-btn:nth-child(2):hover .barground{
+    height: 100px;
+}
+
+.btn-pied{
+    width: 150px;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    transition: height .2s ease;
+    
+}
+.nav-btn:nth-child(2):hover .btn-pied{
+    height: 140px;
+}
+
+.background-extend{
+    width: 150px;
+    height: 100px;
+    align-items: center;
+    background-color: black;
+}
+.btn-pied a{
+    text-decoration: none;
+}
+.nav-btn:nth-child(2):not(:hover) .btn-pied{
+    display: hidden;
+}
+
+
+/*boutton 3*/
+.nav-btn:nth-child(3){
+    right: 3%;
+}
+.btn-voiture{
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    left: -70%;
+    top: 90%;
+}
+.nav-btn:nth-child(3):not(:hover) .btn-voiture{
+    display: none;
+}
+
+/*boutton 4*/
+.nav-btn:nth-child(4){
+    right: 0.5%;
+}
+.user-text{
+    position: absolute;
+    right: -30%;
+    top: 42%;
+}
+.btn-user{
+    text-decoration: none;
+}
+.nav-btn:nth-child(4):not(:hover) .user-text{
+    display: none;
+}
+
+/*
+
+** Main 
+
+*/
+/**text-part block**/
+
+/* blocks gestion */
+main{
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.text-part{
+    position: absolute;
+    left: 4cm;
+    top: 4cm;
+}
+.block-link{
+    position: relative;
+}
+.page-title{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    top: 8rem;
+    left: 2rem;
+}
+/* walk-link block */
+.walk-title{
+    position: absolute;
+    font-size: 40px;
+    top:8.5rem;
+    left: 5rem;
+}
+.walk-link{
+    position: relative;
+    top: 12.5rem;
+    left: 7rem;
+    font-size: 30px;
+}
+.walk-link a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.walk-link a:nth-child(1){
+    width: 10rem;
+}
+.walk-link a:nth-child(2){
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 20rem;
+}
+.walk-link a:nth-child(3){
+    width: 15rem;
+}
+.walk-link a:hover{
+    color: blueviolet;
+}
+
+/* car-link block */
+.car-title{
+    position: relative;
+    top: 14rem;
+    left: 5rem;
+    font-size: 40px;
+}
+.car-link{
+    font-size: 30px;
+    position: relative;
+    left: 7rem;
+    top: 15rem;
+}
+
+
+
+
+/* Image Part */
+.image-part img{
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border-radius: 3rem;
+}
+
+.image_1{
+    position: absolute;
+    left: 30cm;
+    top: 15%;
+    z-index: 3;
+    box-shadow: 3px 3px 3px black;
+}
+.image_1.move-to-down{
+    transform: translate(3cm, 5.25cm);
+    
+}
+.image_1.move-to-up{
+    transform: translate(-3cm, -5.25cm);
+}
+.image_1.move-active{
+    transition: transform 0.15s;
+}
+
+
+.image_2{
+    position: absolute;
+    left: 33cm;
+    top: 35%;
+    z-index: 2;
+    box-shadow: 3px 3px 3px black;
+}
+.image_2.move-to-down{
+    transform: translate(3cm, 5.25cm);
+    
+}
+.image_2.move-to-up{
+    transform: translate(-3cm, -5.25cm);
+}
+.image_2.move-active{
+    transition: transform 0.15s;
+}
+
+.image_3{
+    position: absolute;
+    left: 36cm;
+    top: 55%;
+    z-index: 1;
+    box-shadow: 3px 3px 3px black;
+}
+.image_3.move-to-down{
+    transform: translate(3cm, 5.25cm);
+    
+}
+.image_3.move-to-up{
+    transform: translate(-3cm, -5.25cm);
+}
+.image_3.move-active{
+    transition: transform 0.15s;
+}
+
+/*
+** CSS autres pages
+*/
+.folium-map {
+    position: relative;
+    display: flex;
+    width: 1080.0px;
+    height: 700.0px;
+    left: 27rem;
+    top: 12rem;
+    z-index: 2;
+    border-radius: 2rem;
+    box-sizing: 5px;
+    border: 2px #b39eb5 solid;
+}
+.title-page{
+    font-family: 'Source Serif Pro', serif;
+    position: relative;
+    font-size: 50px;
+    top: 9rem;
+    left: 2rem;
+}
+
+.wipe-transition {
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(90deg, rgb(165, 165, 223),midnightblue) ;
+    position: absolute;
+    left: -100%;
+    z-index: 7;
+}
+
+/* 
+
+** Bande de transition 
+
+*/
+.cont-bandes {
+    width: 100%;
+    height: 90vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top:10%;
+    pointer-events: none;
+    /* background: #000; */
+    z-index: 500;
+}
+
+.bande{
+    width: 20%;
+    height: 0%;
+}
+.bande:nth-child(1){
+    background: #C7CEEA;
+}
+.bande:nth-child(2){
+    background: #B5EAD7; 
+}
+.bande:nth-child(3){
+    background: #E2F0CB;
+}
+.bande:nth-child(4){
+    background: #ffdac1;
+}
+.bande:nth-child(5){
+    background: #FFB7B2;
+}
